@@ -1,7 +1,7 @@
 // Gerando mapa através do leaflet
 import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import { FiClock, FiInfo } from "react-icons/fi";
-import { FaImages, FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import api from "../services/api";
@@ -54,7 +54,7 @@ export default function Orphanage() {
               return (
                 <button
                   key={image.id}
-                  className={activeImageIndex == index ? 'active' : ''}
+                  className={activeImageIndex === index ? 'active' : ''}
                   type="button"
                   onClick={() => {
                     setActiveImageIndex(index)
@@ -126,10 +126,10 @@ export default function Orphanage() {
               ) }
             </div>
 
-            {/*  <button type="button" className="contact-button">
+             <button type="button" className="contact-button">
               <FaWhatsapp size={20} color="#fff" />
               Entrar em contato
-            </button> */}
+            </button>
           </div>
         </div>
       </main>

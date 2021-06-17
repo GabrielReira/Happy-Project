@@ -17,6 +17,7 @@ export default function CreateOrphanage() {
   const [position, setPosition] = useState({ latitude: 0, longitude: 0 })
   const [name, setName] = useState('');
   const [about, setAbout] = useState('');
+  const [whatsapp, setWhatsapp] = useState('');
   const [instructions, setInstructions] = useState('');
   const [opening_hours, setOpeningHours] = useState('');
   const [open_on_weekends, setOpenOnWeekends] = useState(true);
@@ -111,6 +112,11 @@ export default function CreateOrphanage() {
             <div className="input-block">
               <label htmlFor="about">Sobre <span>Máximo de 300 caracteres</span></label>
               <textarea id="name" maxLength={300} value={about} onChange={event => setAbout(event.target.value)} />
+            </div>
+
+            <div className="input-block">
+              <label htmlFor="whatsapp">Número de Whatsapp</label>
+              <input id="whatsapp" value={whatsapp} onChange={event => setWhatsapp(event.target.value)} />
             </div>
 
             <div className="input-block">
